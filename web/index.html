@@ -26,6 +26,8 @@
   .bar > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
   .row { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 10px; color: var(--muted); }
   .stats { margin-left: auto; font-variant-numeric: tabular-nums; }
+  .links a { color: var(--muted); }
+  .links a:hover { color: var(--text); }
   select, button { font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line);
                    border-radius: 4px; padding: 3px 8px; cursor: pointer; }
   .pad, .touch-hint { display: none; }
@@ -50,7 +52,7 @@
     .touch .game { grid-template-columns: 1fr auto 1fr; grid-template-areas: "move screen turn"; }
     .touch .screen { width: auto; height: calc(100svh - 64px); margin: 0; }
     .touch .pad { height: auto; min-height: 0; }
-    .touch .touch-hint { display: none; }
+    .touch .touch-hint, .touch .links { display: none; }
   }
 </style>
 </head>
@@ -77,6 +79,10 @@
   </div>
   <div class="row keys-hint">WASD / ↑↓ move · ←→ turn · Shift run · Space fire · R new start · Esc pause</div>
   <div class="row touch-hint">left: drag to move, far to run · right: drag sideways to turn</div>
+  <div class="row links">
+    <a href="https://github.com/kulikov0/micro-doom-world" target="_blank" rel="noopener">Code on GitHub</a>
+    <a href="https://huggingface.co/kulikov0/micro-doom-world" target="_blank" rel="noopener">Model card</a>
+  </div>
 </main>
 <script type="module" src="game.js"></script>
 </body>
